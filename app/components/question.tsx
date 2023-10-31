@@ -7,7 +7,8 @@ interface QuestionProps {
   question:{
     question:string,
     options:string[],
-    correctAnswer:string
+    correctAnswer:string,
+    time:number
   }
   onNextQuestion: () => void;
   total: number;
@@ -53,7 +54,7 @@ const Question: React.FC<QuestionProps> = ({ question, onNextQuestion, total , s
             <div className="lg:w-full md:w-full flex justify-center absolute w-11/12  top-2 md:top-10 lg:top-5">
             <CountdownCircleTimer
                 isPlaying
-                duration={25}
+                duration={question.time || 25}
                 colorsTime={[7, 5, 2, 0]}
                 size={100}
                 colors={[
