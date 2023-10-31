@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useTestContext } from '../store/context';
+import { useTestContext } from '../../store/context';
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 interface PopupProps {

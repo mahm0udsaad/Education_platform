@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { faBook, faCalculator, faFlask, faHistory } from '@fortawesome/free-solid-svg-icons';
-import usePopup from '../../Hooks/usePopup';
+import usePopup from '../Hooks/usePopup';
 import { getTestsName } from '@/lib/data';
 
 const TestsGrid = async ({tests}:any) => {
