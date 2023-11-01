@@ -30,6 +30,20 @@ export const getTest= async(testName:string) => {
       return null;
     }
 };
+export const DeleteTest= async(testName:string) => {
+   await connectToDatabase()
+      const database = client.db('tests'); 
+      const collection = database.collection(testName);
+      collection.drop((err ,delOK )=>{
+         if (err) throw err;
+         if (delOK) {
+           console.log(`Collection ${testName} deleted`);
+         } else {
+           console.log(`Collection ${testName} not found`);
+         }
+      })
+};
+
 export const addQuiz= async(quiz : any) => {
    await connectToDatabase()
    try {

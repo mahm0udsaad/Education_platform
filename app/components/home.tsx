@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import TestsGrid from './testsGrid';
+import { TestsGrid } from './testsGrid';
 import { getTestsName } from '@/lib/data';
 
 const Home = async() => {
